@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          npm install
+          npm ci
       - run: |
           npm run all
   test: # make sure the action works on a clean machine without building
@@ -20,7 +20,7 @@ jobs:
       matrix:
         php: ["8.1", "8.2", "8.3", "8.4", "8.5"]
         pm-version-major: [5]
-        image: [ubuntu-20.04, ubuntu-22.04, ubuntu-latest]
+        image: [ubuntu-22.04, ubuntu-24.04, ubuntu-latest]
 
     steps:
       - uses: actions/checkout@v4
